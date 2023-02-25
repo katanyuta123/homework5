@@ -78,7 +78,7 @@ class ProjectDetailsPage extends StatelessWidget {
                         padding: const EdgeInsets.all(10.0),
                         child: Text('ยอดบริจาคขณะนี้',style: amountStyle),
                       ),
-                      Text('   '+receive.toString() ,style: receiveAmountStyle,),
+                      Text('   '+receive.toString()+' บาท' ,style: receiveAmountStyle,),
                       SizedBox(height: 10.0),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -152,6 +152,7 @@ class ProjectDetailsPage extends StatelessWidget {
                           ),
                         ],
                       ),
+                      SizedBox(height: 10.0),
                       Row(
                         children: [
                           Expanded(flex :1,
@@ -159,11 +160,40 @@ class ProjectDetailsPage extends StatelessWidget {
                               onPressed: () {
                                 //todo:
                               },
-                              child: Text(' หยิบใส่ตะกร้า'),
+                              child:
+                             // Icon(Icons.shopping_cart_outlined),
+                              Text(' 🌻 หยิบใส่ตะกร้า'),
                             ),
                           ),
                         ],
-                      )
+                      ),
+                      SizedBox(height: 30.0),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('แชร์ให้เพื่อน',),
+                          //Icon(Icons.shopping_cart_outlined),
+                        ],
+                      ),
+                      SizedBox(height: 10.0),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Icon(Icons.laptop_chromebook),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Icon(Icons.facebook_sharp),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Icon(Icons.wb_twilight_sharp),
+                          ),
+
+                        ],
+                      ),
                     ],
                   ),
                 ),
